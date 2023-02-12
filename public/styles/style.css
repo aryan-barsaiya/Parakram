@@ -3,11 +3,12 @@ html{
     overflow-x: hidden;
 }
 .wrapper{
-    position: absolute;
+    position: relative  ;
     width: 100%;
     height: 100%;
 }
 .section_first{
+  /* position: relative; */
     height: 100%;
     display: flex;
     justify-content: center;
@@ -185,10 +186,10 @@ ul{
 }
 .footer{
     opacity: 0.8;
-	background-color: #232323;;
+	  background-color: #232323;
     padding: 70px 0;
     position: relative;
-    top: 200%;
+    bottom: 0px;
 }
 .footer-col{
    width: 25%;
@@ -409,5 +410,8 @@ text-align: center;
 /* About us Section end */
 
 canvas{
+  position: absolute;
+  z-index: -1;
+  top: 0;
     margin-top: -20px;
 }
