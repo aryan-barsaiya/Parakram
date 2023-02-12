@@ -406,3 +406,6 @@ text-align: center;
 
 /* About us Section end */
 
+canvas{
+    margin-top: -20px;
+}
