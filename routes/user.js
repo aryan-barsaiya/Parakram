@@ -10,5 +10,7 @@ router.get('/home', (req, res) => {
 router.get('/sponsors', (req, res) => {
     res.render('sponsors.ejs');
 })
-
+router.get('/events', (req, res) => {
+    res.render('events.ejs');
+})
 module.exports = router;

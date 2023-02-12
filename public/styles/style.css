@@ -162,8 +162,6 @@ i{
  
 }
 
-
-
 /* footer */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 body{
@@ -177,7 +175,6 @@ body{
 }
 .container{
 	max-width: 1170px;
-	/* margin:auto; */
 }
 .row{
 	display: flex;
@@ -187,8 +184,11 @@ ul{
 	list-style: none;
 }
 .footer{
-	background-color: #24262b;
+    opacity: 0.8;
+	background-color: #232323;;
     padding: 70px 0;
+    position: relative;
+    top: 200%;
 }
 .footer-col{
    width: 25%;
@@ -207,7 +207,7 @@ ul{
 	position: absolute;
 	left:0;
 	bottom: -10px;
-	background-color: #088178;
+	background-color: #b27f1d;
 	height: 2px;
 	box-sizing: border-box;
 	width: 100px;
@@ -257,6 +257,8 @@ ul{
     width: 100%;
 }
 }
+
+
 
 
 
