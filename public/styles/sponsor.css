@@ -1,0 +1,50 @@
+#logo-card a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+}
+#logo-card {
+  width: 300px;
+  margin: 20px 0;
+}
+
+.sponsor-category h1 {
+  text-align: center;
+  padding: 20px;
+}
+
+.sponser-container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 0 20px;
+}
+
+#sponsor-page {
+  margin: 0;
+  color: white;
+  background-color: #0d0d0d;
+}
+
+#title-sponsor-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#title-sponsor-description {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 868px) {
+  #title-sponsor-container {
+    flex-direction: column;
+  }
+}
