@@ -1,16 +1,17 @@
 html{
     background-color: black;
+    overflow-x: hidden;
 }
 .wrapper{
     position: absolute;
-    top:45%;
-    left:30%;
-    transform: translate(-50%,-50%);
-    -webkit-transform: translate(-50%,-50%);
-    -moz-transform: translate(-50%,-50%);
-    -ms-transform: translate(-50%,-50%);
-    -o-transform: translate(-50%,-50%);
-    width: 30%;
+    width: 100%;
+    height: 100%;
+}
+.section_first{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .flame{
     filter: drop-shadow(2px -4px 1px #C03131) url(#fire);
@@ -92,8 +93,6 @@ body{
    align-items: center;
    position: fixed;
    z-index: 99;
-   box-shadow: 0 0 10px #000;
-   background: rgba(0,0,0,0.5);
 }
 #chk1{
    display: none;
@@ -101,12 +100,12 @@ body{
     
 }
 i{
-   color: #fff;
+   color: #b9841e;
    cursor: pointer;
 }
 .rah .logo{
    flex: 1;
-   color:#fff;
+   color:#b9841e;
     
    margin-left: 50px;
    text-transform: uppercase;
@@ -123,13 +122,13 @@ i{
 }
 .rah ul li a{
    text-decoration: none;
-   color:#fff;
+   color:#b9841e;
    font-weight: 600;
    text-transform: uppercase;
    padding: 10px 15px;
 }
 .rah ul li a:hover{
-   border-bottom: 2px solid cadetblue;
+   border-bottom: 2px solid #e34e38;
 }
 .rah .menu{
    font-size: 2.5em;
@@ -178,7 +177,7 @@ body{
 }
 .container{
 	max-width: 1170px;
-	margin:auto;
+	/* margin:auto; */
 }
 .row{
 	display: flex;
@@ -259,8 +258,154 @@ ul{
 }
 }
 
+canvas{
+    height: 100%;
+    width: 100%;
+}
 
 
 
 
+
+
+
+
+/* About Us Section */
+
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Playfair+Display:wght@700&display=swap');
+
+:root {
+  --scale: 0.1;
+  --space: 8vmin;
+  --font-primary: 'Lato', sans-serif;
+  --font-heading: 'Playfair Display', serif;
+}
+
+@media (prefers-reduced-motion) {
+  :root {
+    --scale: 0;
+  }
+}
+
+/* * {
+  box-sizing: border-box;
+} */
+
+/* body {
+  color: hsl(0, 0%, 95%);
+  background-color: hsl(5, 15%, 5%);
+  font-size: clamp(1.2rem, 5vw, 1.5rem);
+  font-family: var(--font-primary);
+  line-height: 1.6;
+} */
+
+.page-title {
+  text-align: center;
+}
+
+/* .page-title::after {
+  content: '↓';
+  display: block;
+  font-size: 2em;
+  opacity: 0;
+  transform: translateY(-24px);
+  animation: fadein 800ms 500ms cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+} */
+
+/* .header,
+.footer {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+} */
+
+.section {
+  transform-origin: center top;
+  transform: scaleY(calc(1 - var(--scale)));
+}
+
+.section > * {
+  transform-origin: center top;
+  transform: scaleY(calc(1 / (1 - var(--scale))));
+}
+
+.section-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: bold;
+  line-height: 1.125;
+}
+
+.content {
+color: #fff;
+text-align: center;
+  position: relative;
+  margin: -50vh auto 0;
+  padding: var(--space);
+  max-width: 70%;
+  width: calc(100% - var(--space));
+  background: hsla(5, 15%, 5%, 0.9);
+  margin: 0 auto;
+}
+
+/* .content > * + * {
+  margin-top: 2rem;
+} */
+
+.image-container {
+  position: sticky;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -2;
+  overflow: hidden !important;
+}
+
+.image-container img {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  overflow: hidden !important;
+}
+
+.image-container::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(
+    to bottom,
+    hsla(5, 15%, 5%, 0) 0%,
+    hsla(5, 15%, 5%, 0.013) 8.1%,
+    hsla(5, 15%, 5%, 0.049) 15.5%,
+    hsla(5, 15%, 5%, 0.104) 22.5%,
+    hsla(5, 15%, 5%, 0.175) 29%,
+    hsla(5, 15%, 5%, 0.259) 35.3%,
+    hsla(5, 15%, 5%, 0.352) 41.2%,
+    hsla(5, 15%, 5%, 0.45) 47.1%,
+    hsla(5, 15%, 5%, 0.55) 52.9%,
+    hsla(5, 15%, 5%, 0.648) 58.8%,
+    hsla(5, 15%, 5%, 0.741) 64.7%,
+    hsla(5, 15%, 5%, 0.825) 71%,
+    hsla(5, 15%, 5%, 0.896) 77.5%,
+    hsla(5, 15%, 5%, 0.951) 84.5%,
+    hsla(5, 15%, 5%, 0.987) 91.9%,
+    hsl(5, 15%, 5%) 100%
+  );
+}
+
+@keyframes fadein {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* About us Section end */
 

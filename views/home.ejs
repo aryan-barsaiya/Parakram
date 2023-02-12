@@ -1,7 +1,8 @@
 <%- include('./partials/headers'); -%>
 <link rel="stylesheet" href="">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <div class="wrapper">
-    <section>
+    <section class="section_first">
     <svg width="1334" height="430" viewBox="0 0 1334 430" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g opacity="0.3">
         <path d="M760.046 77.2139C760.337 77.2139 760.629 77.2139 760.862 77.2139C783.022 77.2139 806.931 94.9898 806.931 94.9898H826.175H841.454H851.834V97.2117L950.97 98.8782L948.637 107.211L943.389 112.21L1295.61 119.432" stroke="url(#paint0_linear_204_2)" stroke-width="5" stroke-miterlimit="10"/>
@@ -662,75 +663,22 @@
         </defs>
         </svg>
     </section>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r122/three.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/stats.js/7/Stats.min.js"></script>
-        <script >
-            var camera, scene, renderer,
-    geometry, material, mesh;
- 
-init();
-animate();
- 
-function init() {
-   clock = new THREE.Clock();
-
-    renderer = new THREE.WebGLRenderer();
-    renderer.setSize( window.innerWidth, window.innerHeight );
-
-    scene = new THREE.Scene();
- 
-    camera = new THREE.PerspectiveCamera( 70, window.innerWidth / window.innerHeight, 1, 10000 );
-    camera.position.z = 250;
-    scene.add( camera );
- 
-    geometry = new THREE.CubeGeometry( 200, 200, 200 );
-    material = new THREE.MeshLambertMaterial( { color: 0xffffff, wireframe: false } );
-    mesh = new THREE.Mesh( geometry, material );
-    cubeSineDriver = 0;
- 
-    THREE.ImageUtils.crossOrigin = ''; //Need this to pull in crossdomain images from AWS
- 
-    light = new THREE.DirectionalLight(0xffffff,0.3);
-    light.position.set(-1,0,1);
-    scene.add(light);
-  
-    smokeTexture = THREE.ImageUtils.loadTexture('https://s3-us-west-2.amazonaws.com/s.cdpn.io/95637/Smoke-Element.png');
-    smokeMaterial = new THREE.MeshLambertMaterial({color: 0xffffff, map: smokeTexture, transparent: true});
-    smokeGeo = new THREE.PlaneGeometry(300,300);
-    smokeParticles = [];
-
-    for (p = 0; p < 150; p++) {
-        var particle = new THREE.Mesh(smokeGeo,smokeMaterial);
-        particle.position.set(Math.random()*500-250,Math.random()*500-250,Math.random()*1000-100);
-        particle.rotation.z = Math.random() * 360;
-        scene.add(particle);
-        smokeParticles.push(particle);
-    }
-    document.body.appendChild( renderer.domElement );
-}
- 
-function animate() {
-    delta = clock.getDelta();
-    requestAnimationFrame( animate );
-    evolveSmoke();
-    render();
-}
- 
-function evolveSmoke() {
-    var sp = smokeParticles.length;
-    while(sp--) {
-        smokeParticles[sp].rotation.z += (delta * 0.2);
-    }
-}
-
-function render() {
-    mesh.rotation.x += 0.005;
-    mesh.rotation.y += 0.01;
-    cubeSineDriver += .01;
-    mesh.position.z = 100 + (Math.sin(cubeSineDriver) * 500);
-    renderer.render( scene, camera );
-}
-        </script>
+    <section>
+        <div class="container">
+            <!-- <p>Here is a div</p> -->
+                <section class="section" data-aos="fade-up" data-aos-duration="2000">
+                    <div>
+                  <figure class="image-container"><img src="https://images.unsplash.com/photo-1556191034-cbb6aa3cb008?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1798&q=80" alt=""/></figure>
+                  <div>
+                  <article class="content"  data-aos="zoom-in" data-aos-duration="2000" style="border-radius: 10px;">
+                    <h2 class="section-title">Let's dive into what we are!</h2>
+                    <p style="font-size: 1.4rem; line-height: 2.5rem;">Parakram is the Annual Inter-College Sports Festival of IIT(ISM) Dhanbad. The 3-day Sports Festival of IIT(ISM) DHANBAD is one of the largest sporting fests in Eastern India. ”Parakram” in Sanskrit means efforts, strength, and heroism. Teams from various colleges compete to be the best and to lift the most aspired trophy of PARAKRAM. In the true sense, it is an exhibition of sporting fervour, and the success of the meet has been ratified by the success of many of its winners higher up in the sporting hierarchy.</p>
+                  </article>
+                  </div>
+                  </div>    
+                </section>
+        </div>
+    </section>
     </div>
     <svg class="flameAnimate">
         <filter id="fire">
@@ -740,4 +688,77 @@ function render() {
            <feDisplacementMap in="SourceGraphic" Scale="10"></feDisplacementMap>
         </filter>
    </svg>
-    <%- include('./partials/footers'); -%>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r122/three.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/stats.js/7/Stats.min.js"></script>
+   <script >
+       var camera, scene, renderer,
+geometry, material, mesh;
+
+init();
+animate();
+
+function init() {
+clock = new THREE.Clock();
+
+renderer = new THREE.WebGLRenderer();
+// renderer.setSize( window.innerWidth, window.innerHeight );
+
+scene = new THREE.Scene();
+
+camera = new THREE.PerspectiveCamera( 70, window.innerWidth / window.innerHeight, 1, 10000 );
+camera.position.z = 250;
+scene.add( camera );
+
+geometry = new THREE.CubeGeometry( 200, 200, 200 );
+material = new THREE.MeshLambertMaterial( { color: 0xffffff, wireframe: false } );
+mesh = new THREE.Mesh( geometry, material );
+cubeSineDriver = 0;
+
+THREE.ImageUtils.crossOrigin = ''; //Need this to pull in crossdomain images from AWS
+
+light = new THREE.DirectionalLight(0xffffff,0.3);
+light.position.set(-1,0,1);
+scene.add(light);
+
+smokeTexture = THREE.ImageUtils.loadTexture('https://s3-us-west-2.amazonaws.com/s.cdpn.io/95637/Smoke-Element.png');
+smokeMaterial = new THREE.MeshLambertMaterial({color: 0xffffff, map: smokeTexture, transparent: true});
+smokeGeo = new THREE.PlaneGeometry(300,300);
+smokeParticles = [];
+
+for (p = 0; p < 150; p++) {
+   var particle = new THREE.Mesh(smokeGeo,smokeMaterial);
+   particle.position.set(Math.random()*500-250,Math.random()*500-250,Math.random()*1000-100);
+   particle.rotation.z = Math.random() * 360;
+   scene.add(particle);
+   smokeParticles.push(particle);
+}
+document.body.appendChild( renderer.domElement );
+}
+
+function animate() {
+delta = clock.getDelta();
+requestAnimationFrame( animate );
+evolveSmoke();
+render();
+}
+
+function evolveSmoke() {
+var sp = smokeParticles.length;
+while(sp--) {
+   smokeParticles[sp].rotation.z += (delta * 0.2);
+}
+}
+
+function render() {
+mesh.rotation.x += 0.005;
+mesh.rotation.y += 0.01;
+cubeSineDriver += .01;
+mesh.position.z = 100 + (Math.sin(cubeSineDriver) * 500);
+renderer.render( scene, camera );
+}
+   </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+               AOS.init();
+    </script>
+<%- include('./partials/footers'); -%>
