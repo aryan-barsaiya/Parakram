@@ -124,7 +124,7 @@ i{
    padding: 10px 15px;
 }
 .rah ul li a:hover{
-   border-bottom: 2px solid cadetblue;
+   border-bottom: 2px solid #b27f1d;
 }
 .rah .menu{
    font-size: 2.5em;
@@ -183,7 +183,8 @@ ul{
 	list-style: none;
 }
 .footer{
-	background-color: #24262b;
+    opacity: 0.8;
+	background-color: #232323;;
     padding: 70px 0;
 }
 .footer-col{
@@ -203,7 +204,7 @@ ul{
 	position: absolute;
 	left:0;
 	bottom: -10px;
-	background-color: #088178;
+	background-color: #b27f1d;
 	height: 2px;
 	box-sizing: border-box;
 	width: 100px;
