@@ -15,19 +15,29 @@ html{
 .flame{
     filter: drop-shadow(2px -4px 1px #C03131) url(#fire);
     -webkit-filter: drop-shadow(2px -4px 1px #C03131) url(#fire);
+    opacity: 0;
+    animation: animate1 2s cubic-bezier(0, 0.23, 1, .1) forwards 3s;
+    -webkit-animation: animate1 2s cubic-bezier(0, 0.23, 1, .1) forwards 3s;
 }
 
 .flameAnimate{
     width: 0;
     height: 0;
 }
+
+
+.pletters{
+    opacity: 0;
+    animation: animate1 2s cubic-bezier(0, 0.23, 1, .1) forwards 2s;
+    -webkit-animation: animate1 2s cubic-bezier(0, 0.23, 1, .1) forwards 2s;
+}
 path{
     stroke-width: 3;
     stroke-miterlimit: 10;
     stroke-dasharray: 1800;
-    opacity: 10;
-    animation: animate 3s cubic-bezier(0, 0.23, 1, .1);
-    -webkit-animation: animate 3s cubic-bezier(0, 0.23, 1, .1);
+
+    animation: animate 3s cubic-bezier(0, 0.23, 1, .1) ;
+    -webkit-animation: animate 3s cubic-bezier(0, 0.23, 1, .1) ;
 }
 .logo{
     fill:url(#paint126_linear_204_2);
@@ -37,11 +47,6 @@ path{
     fill:#E13737;
     stroke: #E13737;
 }
-/* .pletters{
-    animation: animate1 1s cubic-bezier(0, 0.23, 1, .1);
-    -webkit-animation: animate1 1s cubic-bezier(0, 0.23, 1, .1);
-    animation-delay: 2s;
-} */
 
 @keyframes animate {
     0%{
@@ -62,9 +67,6 @@ path{
         opacity: 0;
     }
     100%{
-        opacity: 10;
+        opacity: 1;
     }
 }
-
-
-
