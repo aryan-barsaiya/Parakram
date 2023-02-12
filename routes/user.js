@@ -7,13 +7,8 @@ router.get('/', (req, res) => {
 router.get('/home', (req, res) => {
     res.render('home.ejs');
 })
-
-router.get('/gallery', (req, res) => {
-    res.send('gallery page');
-})
-
-router.get('/sponsor', (req, res) => {
-    res.render('sponsor.ejs');
+router.get('/sponsors', (req, res) => {
+    res.render('sponsors.ejs');
 })
 
 module.exports = router;
