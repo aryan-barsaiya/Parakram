@@ -28,8 +28,8 @@ html{
 
 .pletters{
     opacity: 0;
-    animation: animate1 2s cubic-bezier(0, 0.23, 1, .1) forwards 2s;
-    -webkit-animation: animate1 2s cubic-bezier(0, 0.23, 1, .1) forwards 2s;
+    animation: animate1 1s cubic-bezier(0, 0.23, 1, .1) forwards 2.5s;
+    -webkit-animation: animate1 1s cubic-bezier(0, 0.23, 1, .1) forwards 2.5s;
 }
 path{
     stroke-width: 3;
