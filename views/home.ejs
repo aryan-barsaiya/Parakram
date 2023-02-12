@@ -701,7 +701,7 @@ function init() {
 clock = new THREE.Clock();
 
 renderer = new THREE.WebGLRenderer();
-// renderer.setSize( window.innerWidth, window.innerHeight );
+renderer.setSize( window.innerWidth, window.innerHeight );
 
 scene = new THREE.Scene();
 
@@ -716,7 +716,7 @@ cubeSineDriver = 0;
 
 THREE.ImageUtils.crossOrigin = ''; //Need this to pull in crossdomain images from AWS
 
-light = new THREE.DirectionalLight(0xffffff,0.3);
+light = new THREE.DirectionalLight(0xffffff,0.33);
 light.position.set(-1,0,1);
 scene.add(light);
 
