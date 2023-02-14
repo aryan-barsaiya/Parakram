@@ -175,7 +175,7 @@ body{
 	box-sizing: border-box;
 }
 .container{
-	max-width: 1170px;
+	max-width: 100%;
 }
 .row{
 	display: flex;
@@ -415,3 +415,52 @@ canvas{
   top: 0;
     margin-top: -20px;
 }
+
+
+/*hovering button of home page*/
+.fab-container{
+  position:fixed;
+  bottom:50px;
+  right:50px;
+  cursor:pointer;
+  z-index:210 ; 
+  }
+  .iconbutton{
+  width:50px;
+  height:50px;
+  border-radius: 100%;
+  background: rgba(86, 80, 80, 0.5) !important;
+  box-shadow: 0 8px 32px 0 #db991e71;
+  }
+  .iconbutton-full{
+  width:50px;
+  height:50px;
+  border-radius: 10px;
+  background: rgba(86, 80, 80, 0.5) !important;
+  box-shadow: 0 8px 32px 0 #db991e71;
+  }
+  .button{
+  width:60px;
+  height:60px;
+  background:#A11692;
+  }
+  .button-full{
+  width:200px;
+  height:60px;
+  background:#A11692;
+  }
+  .iconbutton-full i{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  height: 100%;
+  color:white;
+  text-align: center;
+  }
+  .iconbutton i{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  height: 100%;
+  color:white;
+  }

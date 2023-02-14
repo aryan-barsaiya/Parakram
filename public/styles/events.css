@@ -1,244 +1,244 @@
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  .title{
-    font-size:60px;
-    padding:20px 0px;
-  }
-  body {
-    font-family: 'Lato', sans-serif;
-    background-color: black;
-  }
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.title{
+  font-size:60px;
+  padding:20px 0px;
+}
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: black;
+}
 
 
-  /* haeder imaage */
+/* haeder imaage */
 
-  header{
-    height: 40vh;
-    position: relative;
-    margin-bottom: 100px;
-  }
-  header img
-  {
-    margin: 0;
-    padding: 0;
-    height: 50vh;
-    opacity: 0.5;
-  }
+header{
+  height: 40vh;
+  position: relative;
+  margin-bottom: 100px;
+}
+header img
+{
+  margin: 0;
+  padding: 0;
+  height: 50vh;
+  opacity: 0.5;
+}
 
-  header h1{
-    font-size:3rem;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 900;
-    color: #ffd91d;
-    opacity: 0.8;
-    position: absolute;
-    bottom: -30px;
-    left: 6vw;
-  }
+header h1{
+  font-size:3rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
+  color: #ffd91d;
+  opacity: 0.8;
+  position: absolute;
+  bottom: -30px;
+  left: 6vw;
+}
 
-  .container{
-    margin-top: 52vh;
-    width:88vw;
-    margin:0px auto;
-  }
-  /* Float three columns side by side */
+.container-grid{
+  margin-top: 52vh;
+  width:88vw;
+  margin:0px auto;
+}
+/* Float three columns side by side */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row-grid {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row-grid:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 700px) {
+  
+ .container-grid{
+  width: 100%;
+}
+  
   .column {
-    float: left;
-    width: 33.33%;
-    padding: 0 10px;
-  }
-  
-  /* Remove extra left and right margins, due to padding */
-  .row {margin: 0 -5px;}
-  
-  /* Clear floats after the columns */
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  
-  /* Responsive columns */
-  @media screen and (max-width: 700px) {
-    
-   .container{
     width: 100%;
+    display: block;
+    margin-bottom: 20px;
   }
-    
-    .column {
-      width: 100%;
-      display: block;
-      margin-bottom: 20px;
-    }
-  }
+}
 
-  .column:hover{
-    box-shadow: 2px 1px 2px #1e1602;
-    opacity: 0.8;
-    color: rgb(255, 255, 255);
-  }
+.column:hover{
+  box-shadow: 2px 1px 2px #1e1602;
+  opacity: 0.8;
+  color: rgb(255, 255, 255);
+}
 
-  /* Style the counter cards */
-  .card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    padding: 5px;
-    text-align: center;
-    background-image: radial-gradient(circle farthest-side, #fceabb, #1e1602);
-    border-radius:10px;
-    cursor:pointer;
-  }
-  /*  */
-  .card .profile{
-     border-radius:10px;
-     transition: 0.2s;
-  }
-  .card:hover .profile{
-    transform:scale(1.4);
-    border-top-right-radius:50px;
-    border-top-left-radius:50px;
-  }
-  
-  .card .content{
-    width:100%;
-    position:relative;
-    overflow:hidden;
-  }
-  .card .content .back{
-    position:absolute;
-    width:100%;
-    height:100%;
-    background-color:rgba(0,0,0,0.5);
-    transition:1s;
-    
-    z-index:1;
-    padding:10px;
-  }
-  
-  .from-left{
-    top:0;
-    left:-100%;
-  }
-  .card:hover .content .from-left {
-     left:0%;
-  }
-  
-  .from-bottom{
-    top:100%;
-    left:0;
-  }
-  .card:hover .content .from-bottom {
-     top:0%;
-  }
-  
-  .from-right{
-    top:0%;
-    right:-100%;
-  }
-  .card:hover .content .from-right {
-     right:0;
-  }
-  
-  .card .content .back h3{
-    font-size:15px;
-    letter-spacing:2px;
-  }
-  .card .content .back .tem-img{
-    border-radius:100%;
-  }
-  
-  .card .content .back .des{
-    font-size:13px;
-    padding:20px 0px;
-  }
-  .card .content .back .social-icon{
-    list-style:none;
-    margin:0px;
-    padding:0px;
-  }
-  .card .content .back .social-icon li{
-    display:inline-block;
-  }
-  
-  .card .content .back .social-icon li a{
-    display:block;
-    background:#333;
-    color:#fff;
-    width:40px;
-    height:40px;
-    text-align:center;
-    line-height:40px;
-    border-radius:100%;
-  }
-  
-  
-  h2,h3,p{
-    color:#fff;
-  }
-  #h2{
-    color:#fff;
-  }
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 5px;
+  text-align: center;
+  background-image: radial-gradient(circle farthest-side, #fceabb, #1e1602);
+  border-radius:10px;
+  cursor:pointer;
+}
+/*  */
+.card .profile{
+   border-radius:10px;
+   transition: 0.2s;
+}
+.card:hover .profile{
+  transform:scale(1.4);
+  border-top-right-radius:50px;
+  border-top-left-radius:50px;
+}
 
- .glow-on-hover {
-    width: 220px;
-    height: 50px;
-    border: none;
-    outline: none;
-    color: #FFD700;
-    background: #111;
-    cursor: pointer;
-    position: relative;
-    z-index: 0;
-    border-radius: 10px;
+.card .content-grid{
+  width:100%;
+  position:relative;
+  overflow:hidden;
+}
+.card .content-grid .back{
+  position:absolute;
+  width:100%;
+  height:100%;
+  background-color:rgba(0,0,0,0.5);
+  transition:1s;
+  
+  z-index:1;
+  padding:10px;
+}
+
+.from-left{
+  top:0;
+  left:-100%;
+}
+.card:hover .content-grid .from-left {
+   left:0%;
+}
+
+.from-bottom{
+  top:100%;
+  left:0;
+}
+.card:hover .content-grid .from-bottom {
+   top:0%;
+}
+
+.from-right{
+  top:0%;
+  right:-100%;
+}
+.card:hover .content-grid .from-right {
+   right:0;
+}
+
+.card .content-grid .back h3{
+  font-size:15px;
+  letter-spacing:2px;
+}
+.card .content-grid .back .tem-img{
+  border-radius:100%;
+}
+
+.card .content-grid .back .des{
+  font-size:13px;
+  padding:20px 0px;
+}
+.card .content-grid .back .social-icon{
+  list-style:none;
+  margin:0px;
+  padding:0px;
+}
+.card .content-grid .back .social-icon li{
+  display:inline-block;
+}
+
+.card .content-grid .back .social-icon li a{
+  display:block;
+  background:#333;
+  color:#fff;
+  width:40px;
+  height:40px;
+  text-align:center;
+  line-height:40px;
+  border-radius:100%;
+}
+
+
+h2,h3,p{
+  color:#fff;
+}
+#h2{
+  color:#fff;
+}
+
+.glow-on-hover {
+  width: 220px;
+  height: 50px;
+  border: none;
+  outline: none;
+  color: #FFD700;
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
 }
 
 .glow-on-hover:before {
-    content: '';
-    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
-    position: absolute;
-    top: -2px;
-    left:-2px;
-    background-size: 400%;
-    z-index: -1;
-    filter: blur(5px);
-    width: calc(100% + 4px);
-    height: calc(100% + 4px);
-    animation: glowing 20s linear infinite;
-    opacity: 0;
-    transition: opacity .3s ease-in-out;
-    border-radius: 10px;
+  content: '';
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  position: absolute;
+  top: -2px;
+  left:-2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  border-radius: 10px;
 }
 
 .glow-on-hover:active {
-    color: #000
+  color: #000
 }
 
 .glow-on-hover:active:after {
-    background: transparent;
+  background: transparent;
 }
 
 .glow-on-hover:hover:before {
-    opacity: 1;
+  opacity: 1;
 }
 
 .glow-on-hover:after {
-    z-index: -1;
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background:#222;
-    left: 0;
-    top: 0;
-    border-radius: 10px;
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background:#222;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
 }
 
 @keyframes glowing {
-    0% { background-position: 0 0; }
-    50% { background-position: 400% 0; }
-    100% { background-position: 0 0; }
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
 }
 
