@@ -40,7 +40,7 @@
     left: 6vw;
   }
 
-  .container{
+  .container-grid{
     margin-top: 52vh;
     width:88vw;
     margin:0px auto;
@@ -53,10 +53,10 @@
   }
   
   /* Remove extra left and right margins, due to padding */
-  .row {margin: 0 -5px;}
+  .row-grid {margin: 0 -5px;}
   
   /* Clear floats after the columns */
-  .row:after {
+  .row-grid:after {
     content: "";
     display: table;
     clear: both;
@@ -65,7 +65,7 @@
   /* Responsive columns */
   @media screen and (max-width: 700px) {
     
-   .container{
+   .container-grid{
     width: 100%;
   }
     
@@ -102,12 +102,12 @@
     border-top-left-radius:50px;
   }
   
-  .card .content{
+  .card .content-grid{
     width:100%;
     position:relative;
     overflow:hidden;
   }
-  .card .content .back{
+  .card .content-grid .back{
     position:absolute;
     width:100%;
     height:100%;
@@ -122,7 +122,7 @@
     top:0;
     left:-100%;
   }
-  .card:hover .content .from-left {
+  .card:hover .content-grid .from-left {
      left:0%;
   }
   
@@ -130,7 +130,7 @@
     top:100%;
     left:0;
   }
-  .card:hover .content .from-bottom {
+  .card:hover .content-grid .from-bottom {
      top:0%;
   }
   
@@ -138,32 +138,32 @@
     top:0%;
     right:-100%;
   }
-  .card:hover .content .from-right {
+  .card:hover .content-grid .from-right {
      right:0;
   }
   
-  .card .content .back h3{
+  .card .content-grid .back h3{
     font-size:15px;
     letter-spacing:2px;
   }
-  .card .content .back .tem-img{
+  .card .content-grid .back .tem-img{
     border-radius:100%;
   }
   
-  .card .content .back .des{
+  .card .content-grid .back .des{
     font-size:13px;
     padding:20px 0px;
   }
-  .card .content .back .social-icon{
+  .card .content-grid .back .social-icon{
     list-style:none;
     margin:0px;
     padding:0px;
   }
-  .card .content .back .social-icon li{
+  .card .content-grid .back .social-icon li{
     display:inline-block;
   }
   
-  .card .content .back .social-icon li a{
+  .card .content-grid .back .social-icon li a{
     display:block;
     background:#333;
     color:#fff;
