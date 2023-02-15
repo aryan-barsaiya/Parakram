@@ -246,18 +246,34 @@ ul{
 	color: #24262b;
 	background-color: #ffffff;
 }
+.home-des{
+  font-size: 1.4rem;
+  line-height: 2.5rem;
+}
 
 @media(max-width: 767px){
   .footer-col{
     width: 50%;
     margin-bottom: 30px;
 }
+.home-des{
+  font-size:1.2rem;
+  line-height: 1.5rem;
+}
 }
 @media(max-width: 574px){
   .footer-col{
     width: 100%;
 }
+.home-des{
+  font-size:0.8rem;
+  line-height: 1.2rem;
 }
+.section-title{
+  font-size:1.2rem;
+}
+}
+
 
 
 
@@ -331,7 +347,7 @@ ul{
 
 .section-title {
   font-family: var(--font-heading);
-  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-size: clamp(1.5rem, 6vw, 4.5rem);
   font-weight: bold;
   line-height: 1.125;
 }
@@ -463,4 +479,19 @@ canvas{
   justify-content:center;
   height: 100%;
   color:white;
+  }
+
+
+  .spacing-div{
+    margin-top:58%
+  }
+  @media(max-width: 912px){
+    .spacing-div{
+      margin-top:105%
+    }
+  }
+  @media(max-width: 574px){
+    .spacing-div{
+      margin-top:80%
+    }
   }
