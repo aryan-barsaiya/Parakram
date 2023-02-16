@@ -13,6 +13,7 @@ html{
     display: flex;
     justify-content: center;
     align-items: center;
+    /* margin-top:-50px; */
 }
 .flame{
     filter: drop-shadow(2px -4px 1px #C03131) url(#fire);
@@ -94,6 +95,8 @@ body{
    align-items: center;
    position: fixed;
    z-index: 99;
+   background-color: #100f0f;
+   opacity: 0.9;
 }
 #chk1{
    display: none;
@@ -176,6 +179,7 @@ body{
 }
 .container{
 	max-width: 100%;
+
 }
 .row{
 	display: flex;
@@ -272,6 +276,11 @@ ul{
 .section-title{
   font-size:1.2rem;
 }
+}
+@media(min-width: 890px){
+  .carousel-head{
+    margin-top: 2rem
+  }
 }
 
 
