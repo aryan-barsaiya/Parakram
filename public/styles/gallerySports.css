@@ -585,6 +585,7 @@ a:focus {
   .slide__title,
   .slide__subtitle,
   .slide__side {
+    color: #fff;
     display: block;
   }
   .slide__title {
