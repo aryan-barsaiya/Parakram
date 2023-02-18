@@ -30,42 +30,54 @@
                       <div class="carousel" id="carousel-1" auto-scroll="7000">
                         <!--The uppermost screen will appear first. This is due to JavaScript-->
                         <section class="carousel-screen">
-                          <img src="Images/home-carousel-images/101.jpeg" alt="Chicago Band" />
+                        <a href="https://www.instagram.com/reel/B9YeCqnJoHL/" target="_blank">
+                            <img src="Images/home-carousel-images/101.jpeg" alt="Chicago Band" />
+                        </a>
                           <section class="text-container">
                             <p>Vijendra Singh</p>
                             <p>Olympics '08 Bronze medalist, Padma Shri Awardee </p>
                           </section>
                         </section>
                         <section class="carousel-screen">
-                          <img src="Images/home-carousel-images/102.jpeg" alt="New York" />
+                          <a href="https://www.instagram.com/reel/B86JkuypkXy/" target="_blank">
+                            <img src="Images/home-carousel-images/102.jpeg" alt="New York" />
+                        </a>
                           <section class="text-container">
                             <p>Rashid Khan</p>
                             <p>International Criketer</p>
                           </section>
                         </section>
                         <section class="carousel-screen">
-                          <img src="Images/home-carousel-images/103.jpg" alt="Los Angeles" />
+                          <a href="https://www.instagram.com/reel/B9Q1tsoDm9B/" target="_blank">
+                            <img src="Images/home-carousel-images/103.jpg" alt="Los Angeles" />
+                        </a>
                           <section class="text-container">
                             <p>Ayhika Mukherjee</p>
                             <p>International Table Tennis Player</p>
                           </section>
                         </section>
                         <section class="carousel-screen">
-                            <img src="Images/home-carousel-images/104.png" alt="Chicago Band" />
+                            <a href="https://www.instagram.com/reel/B8v1LByJSMp/" target="_blank">
+                                <img src="Images/home-carousel-images/104.png" alt="Chicago Band" />
+                            </a>
                             <section class="text-container">
                               <p>Anwar Ahmed Khan</p>
                               <p>Former International Hockey Player</p>
                             </section>
                           </section>
                           <section class="carousel-screen">
-                            <img src="Images/home-carousel-images/105.png" alt="New York" />
+                            <a href="https://www.instagram.com/reel/B8gAAHDJDfP/" target="_blank">
+                                <img src="Images/home-carousel-images/105.png" alt="New York" />
+                            </a>
                             <section class="text-container">
                               <p>Harinder Pal Sandhu</p>
                               <p>Asian Games 2014 Gold Medalist</p>
                             </section>
                           </section>
                           <section class="carousel-screen">
-                            <img src="Images/home-carousel-images/106.png" alt="Los Angeles" />
+                            <a href="https://www.instagram.com/reel/B9ERYzBJpmb/" target="_blank">
+                                <img src="Images/home-carousel-images/106.png" alt="Los Angeles" />
+                                </a>
                             <section class="text-container">
                               <p>Sangram Chougule</p>
                               <p>Mr. Universe 2014, Professional Bodybuilder</p>
@@ -136,16 +148,16 @@
    </svg>
    
    <div class="fab-container">
-    <!-- <div class="button-full iconbutton-full">
-    <a href="https://www.facebook.com/parakram.iitism" target="_blank">
-    <i class="fa-solid fa-plus">Click to feel the nostalgia</i>
+    <div class="button-full iconbutton-full  ">
+    <a href="https://www.facebook.com/parakram.iitism" target="_blank" id="hover-btn">
+        <i class="fa-solid fa-plus"><p class="hover-btn-caption">Come Reminisce!</p><img src="Images\arrow-circle-right-svgrepo-com.svg" height="0rem" width="0rem" alt="" class="hover-btn-img"> </i>
     </a>
-    </div> -->
-    <div class="button iconbutton">
-        <a href="https://www.facebook.com/parakram.iitism" target="_blank">
-        <i class="fa-solid fa-plus"><img src="Images\fb-logo.webp" height="36rem" width="36rem" alt=""></i>
-        </a>
     </div>
+    <!-- <div class="button-sm iconbutton-sm">
+        <a href="https://www.instagram.com/parakram.iitism/reels/" target="_blank">
+        <i class="fa-solid fa-plus"><img src="Images\arrow-circle-right-svgrepo-com.svg" height="36rem" width="36rem" alt=""></i>
+        </a>
+    </div> -->
 
 </div>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
@@ -230,8 +242,10 @@ renderer.render( scene, camera );
     <script>
                AOS.init();
     </script>
+  
     <script>
-        //Right Arrow & Left Arrow
+    //js for carousel
+    //Right Arrow & Left Arrow
 let rightArrow = document.querySelector("#carousel-1 .right-arrow");
 let leftArrow = document.querySelector("#carousel-1 .left-arrow");
 //List of all of the screens in carousel
@@ -461,5 +475,13 @@ if(scrollTime) {
     })
 
 }
+    </script>   
+    <script>
+        setInterval(()=>{
+            document.querySelector('.button-full').classList.add("button-sm");
+            document.querySelector('.button-full').classList.add("iconbutton-sm");
+            document.querySelector('.hover-btn-caption').classList.add("hidden");
+            document.querySelector('.hover-btn-img').classList.add("show");
+        },2500)
     </script>
 </html>
