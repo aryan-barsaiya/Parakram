@@ -201,6 +201,12 @@
     .carousel-head{
       font-size: 1.5rem;
     }
+    .left-arrow{
+      width: 80px;
+    }
+    .right-arrow{
+      width: 80px;
+    }
     .text-container p:nth-child(1) {
       margin: 1px 10px;
       font-size: 0.5em;

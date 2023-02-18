@@ -450,29 +450,33 @@ canvas{
   cursor:pointer;
   z-index:210 ; 
   }
-  .iconbutton{
-  width:50px;
+  .iconbutton-sm{
+  width:100px;
   height:50px;
   border-radius: 100%;
   background: rgba(86, 80, 80, 0.5) !important;
   box-shadow: 0 8px 32px 0 #db991e71;
+  transition: 0.8s;
   }
   .iconbutton-full{
   width:50px;
   height:50px;
-  border-radius: 10px;
+  border-radius: 100px;
   background: rgba(86, 80, 80, 0.5) !important;
   box-shadow: 0 8px 32px 0 #db991e71;
+  transition: 0.8s;
   }
-  .button{
-  width:60px;
+  .button-sm{
+  width:60px !important;
   height:60px;
   background:#A11692;
+  transition: 0.8s;
   }
   .button-full{
   width:200px;
   height:60px;
   background:#A11692;
+  transition: 0.8s;
   }
   .iconbutton-full i{
   display:flex;
@@ -482,12 +486,25 @@ canvas{
   color:white;
   text-align: center;
   }
-  .iconbutton i{
+  .iconbutton-sm i{
   display:flex;
   align-items:center;
   justify-content:center;
   height: 100%;
   color:white;
+  }
+  .hidden{
+    transition: 0.8s;
+    font-size: 0;
+  }
+  .show{
+    transition: 1s;
+    height: 2.5rem !important;
+    width: 2.5rem !important;
+  }
+  .hover-btn-caption{
+  color:#b9841e;
+  text-transform: uppercase;
   }
 
 
@@ -502,5 +519,8 @@ canvas{
   @media(max-width: 574px){
     .spacing-div{
       margin-top:80%
+    }
+    .fab-container{
+      right: 15px;
     }
   }
