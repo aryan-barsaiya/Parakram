@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    position: relative;
+}
+.preloaderParent{
+    position: absolute;
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    z-index: 99;
+}
+.preloader
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% ,-50%);
+    width: max-content;
+    z-index: 1000;
+}
+.preloader img
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20vw;
+    margin-bottom: 0vh;
+}
+.preloader img:nth-child(1)
+{
+    position: relative;
+    left: 0.8vw;
+}
+@media screen and (max-width:500px){
+   .preloader img{
+    width: 40vw;
+   }
+  }
+.hidden{
+    height: 0;
+    width: 0;
+    transition-timing-function: ease-in-out;
+}
+.show{
+    height: 100% !important;
+    width: 100% !important;
+}
