@@ -34,7 +34,7 @@ html{
     animation: animate1 1s cubic-bezier(0, 0.23, 1, .1) forwards 2.5s;
     -webkit-animation: animate1 1s cubic-bezier(0, 0.23, 1, .1) forwards 2.5s;
 }
-path{
+ path  {
     stroke-width: 3;
     stroke-miterlimit: 10;
     stroke-dasharray: 1800;
@@ -42,9 +42,14 @@ path{
     animation: animate 3s cubic-bezier(0, 0.23, 1, .1) ;
     -webkit-animation: animate 3s cubic-bezier(0, 0.23, 1, .1) ;
 }
+rect{
+  opacity: 0;
+  animation: animate1 1s cubic-bezier(0, 0.23, 1, .1) forwards 1.5s;
+  -webkit-animation: animate1 1s cubic-bezier(0, 0.23, 1, .1) forwards 1.5s;
+}
 .logo{
-    fill:url(#paint126_linear_204_2);
-    stroke: url(#paint126_linear_204_2);
+    fill:url(#paint126_linear_213_224);
+    stroke: url(#paint126_linear_213_224);
 }
 .letters{
     fill:#E13737;
