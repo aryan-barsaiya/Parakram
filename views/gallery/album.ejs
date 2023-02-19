@@ -1,10 +1,19 @@
 <%- include('../partials/headers.ejs'); -%>
 <link rel="stylesheet" href="../../styles/gallery.css" />
+<link rel="stylesheet" href="../../styles/preloader.css" />
 
+<div class="preloaderParent">
+  <div class="preloader">
+    <img src="preloader-assets/output-onlinegiftools(2).gif" alt="">
+    <img src="preloader-assets/Group25(1).png" alt="">
+  </div>
+</div>
 <div class="galleryArea">
+
 <article class="flow">
     <h1 style="color:#a4771a" id="galleria">Gallery</h1>
     <!-- <p style="color:#a4771a">“A champion is someone who gets up when he can't.”</p> -->
+    
     <div class="team">
       <ul class="auto-grid" role="list">
         <li >
@@ -58,5 +67,14 @@
       </ul>
     </div>
   </article>
-</div>
   <%-include('../partials/footers')-%>
+</div>
+
+
+<script>
+  setInterval(()=>{
+    document.querySelector('.preloader').classList.add('hidden');
+    document.querySelector('.preloaderParent').style.backgroundColor = 'transparent';
+          document.querySelector('.preloaderParent').style.zIndex = "-1";
+  },1000)
+</script>

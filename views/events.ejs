@@ -3,11 +3,19 @@
 
 <link rel="stylesheet" href="styles/style.css">
 <link rel="stylesheet" href="styles/events.css">
+<link rel="stylesheet" href="styles/preloader.css" />
+<div class="preloaderParent">
+  <div class="preloader">
+    <img src="preloader-assets/output-onlinegiftools(2).gif" alt="">
+    <img src="preloader-assets/Group25(1).png" alt="">
+  </div>
+</div>
+<div class="eventsArea">
 <header>
     <img src="Images/header.png" alt="" width="100%" height="100%">
     <h1>EVENTS</h1>
   </header>
-    <div class="container-grid"> 
+    <div class="container-grid">
         <div class="row-grid">   
               <div class="column">
             <div class="card">
@@ -337,8 +345,15 @@
               </div>
             </div>
           </div>
+      </div><br>
+      <%-include('./partials/footers')-%>
       </div>
       </div>
+      <script>
+        setInterval(()=>{
+          document.querySelector('.preloader').classList.add('hidden');
+          document.querySelector('.preloaderParent').style.backgroundColor = 'transparent';
+          document.querySelector('.preloaderParent').style.zIndex = "-1";
+        },1000)
+      </script>
       
-      <br>
-<%-include('./partials/footers')-%>
