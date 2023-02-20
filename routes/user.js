@@ -34,4 +34,8 @@ router.get('/football', (req, res) => {
 router.get('/volleyball', (req, res) => {
     res.render('gallery/volleyball.ejs');
 })
+
+router.get('/contact', (req, res) => {
+    res.render('contact.ejs');
+})
 module.exports = router;
