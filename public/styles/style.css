@@ -514,11 +514,11 @@ canvas{
 
 
   .spacing-div{
-    margin-top:58%
+    margin-top:50%
   }
-  @media(max-width: 912px){
+  @media(max-width: 1125px){
     .spacing-div{
-      margin-top:105%
+      margin-top:58%
     }
   }
   @media(max-width: 574px){

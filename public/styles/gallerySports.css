@@ -319,6 +319,7 @@ a:focus {
   position: relative;
   overflow: hidden;
   margin: 0;
+  margin-top: 4rem;
   height: 100vh;
   width: 100%;
   height: calc(100vh - 10rem);
@@ -350,7 +351,6 @@ a:focus {
 .slide__img-wrap {
   width: 100%;
   overflow: hidden;
-  z-index: 100;
   height: 80%;
   top: 10%;
   position: absolute;
@@ -372,7 +372,7 @@ a:focus {
   background: none;
   width: 3rem;
   height: 3rem;
-  z-index: 1000;
+  z-index: 51;
   border: 0;
   padding: 0;
   margin: 0;
@@ -467,7 +467,6 @@ a:focus {
 
 .content {
   position: fixed;
-  top: 10rem;
   left: 0;
   width: 100%;
   height: calc(100% - 10rem);
