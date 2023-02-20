@@ -64,7 +64,16 @@ header h1{
 
 /* Responsive columns */
 @media screen and (max-width: 700px) {
-  
+  header{
+    height: 23vh;
+  }
+  header h1{
+    font-size: 2rem;
+  }
+  header img{
+    height: 28vh;
+  }
+
  .container-grid{
   width: 100%;
 }
@@ -73,6 +82,14 @@ header h1{
     width: 100%;
     display: block;
     margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 1025px) and (min-width: 700px){
+  header{
+    margin-bottom: 10rem;
+  }
+  .profile{
+    height: 250px !important;
   }
 }
 
