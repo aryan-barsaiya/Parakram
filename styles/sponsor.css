@@ -1,0 +1,75 @@
+.logo-card {
+    width: 300px;
+    margin: 40px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .logo-card a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+  }
+   .logo-card a img{
+    display: inline-block;
+    height: 6rem;
+    width: 7.5rem;
+  } 
+  .sponsor-category h1 {
+    text-align: center;
+    color: #bb851e;
+    padding: 20px;
+    margin: 60px 0 10px 0;
+  }
+  .sponser-container,
+  #title-sponsor-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background: rgba(0, 0, 0, 0.5) !important;
+    box-shadow: 0 8px 32px 0 #bb841e71;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    margin: 0 150px;
+    padding: 40px 0;
+  }
+  #sponsor-page {
+    background-image: url("../Images/bg-sponsor-9.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    padding-bottom: 70px;
+    margin: 0;
+    color: white;
+    background-color: #0d0d0d;
+  }
+  #title-sponsor-description {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
+  #title-sponsor h1 {
+    margin-top: 0;
+    padding-top: 100px;
+  }
+  @media only screen and (max-width: 868px) {
+    .sponser-container,
+    #title-sponsor-container {
+      margin: 0 50px;
+    }
+  }
+  @media only screen and (max-width: 368px) {
+    .sponser-container,
+    #title-sponsor-container {
+      margin: 0 25px;
+    }
+  }
