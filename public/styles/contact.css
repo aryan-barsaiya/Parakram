@@ -1,10 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Gloock&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,300&display=swap');
- body {
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
+
+ #contact-body {
 	 margin: 0;
-	 padding: 0;
+	 margin-bottom: -24px;
+	 padding: 60px 0;
 	 display: flex;
 	 flex-direction: column;
 	 justify-content: center;
@@ -17,13 +20,13 @@
 
 /* heading */
 
-div.heading
+#contact-body .heading h1
 {
 	display: flex;
 	flex-direction: column;
 	text-align: center;
 	flex-wrap: wrap;
-	font-family: 'Dancing Script', cursive;
+	font-family: 'Dancing Script', cursive!important;
 	justify-content: center;
 	align-items: center;
 	color: #f9b728;
@@ -31,22 +34,8 @@ div.heading
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* contacts  */
- body .container {
+ #contact-body .container {
 	 max-width: 85vw;
 	 display: grid;
 	 grid-template-columns: repeat(auto-fit, minmax(450px,1fr));
@@ -54,16 +43,16 @@ div.heading
 	 margin: 0 auto;
 	 padding: 40px 100px;
 }
- body .container .card {
+ #contact-body .container .card {
 	 position: relative;
 	 width: 400px;
 	 height: 400px;
-	 margin: 0 10px;
+	 margin: 0 auto;
 	 background: #000;
 	 border-radius: 15px;
 	 box-shadow: 0 1px 6px gold;
 }
- body .container .card .face {
+ #contact-body .container .card .face {
 	 position: absolute;
 	 bottom: 0;
 	 left: 0;
@@ -73,46 +62,54 @@ div.heading
 	 justify-content: center;
 	 align-items: center;
 }
- body .container .card .face.face1 {
+ #contact-body .container .card .face.face1 {
 	 box-sizing: border-box;
      
 	 padding: 20px;
 }
- body .container .card .face.face1 h2 {
+ #contact-body .container .card .face.face1 h2 {
 	font-family: 'Cormorant Garamond', serif;
 	 margin: 0;
 	 padding: 0;
 }
-body .container .card .face.face1 h1
+#contact-body .container .card .face.face1 h1
 {
 	font-family: 'Cormorant Garamond', serif;
     font-size: 2.5em;
+		text-align: center;
+		margin-top: -100px;
+		margin-bottom: 100px;
 }
- body .container .card .face.face1 .card1 {
+#contacts-athletics
+{
+	margin-top: -70px!important;
+		margin-bottom: 70px!important;
+}
+ #contact-body .container .card .face.face1 .card1 {
 	 background-color: #fffc00;
 	 -webkit-background-clip: text;
 	 -webkit-text-fill-color: transparent;
 }
 
-body .container .card .face.face1 .white {
+#contact-body .container .card .face.face1 .white {
     background-color: white;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
- body .container .card .face.face1 .card2 {
+ #contact-body .container .card .face.face1 .card2 {
 	 background-color: #00fffc;
 	 -webkit-background-clip: text;
 	 -webkit-text-fill-color: transparent;
 }
- body .container .card .face.face1 .card3 {
+ #contact-body .container .card .face.face1 .card3 {
 	 background-color: #fc00ff;
 	 -webkit-background-clip: text;
 	 -webkit-text-fill-color: transparent;
 }
- body .container .card .face.face2 {
+ #contact-body .container .card .face.face2 {
 	 transition: 0.5s;
 }
- body .container .card .face.face2 h2 {
+ #contact-body .container .card .face.face2 h2 {
 	 margin: 0;
 	 padding: 0;
 	 font-size: 2.5em;
@@ -121,19 +118,20 @@ body .container .card .face.face1 .white {
 	 transition: 0.5s;
 	 text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 	 z-index: 10;
+	 text-align: center;
 }
- body .container .card .face.face2 {
+ #contact-body .container .card .face.face2 {
 	 height: 60px;
 }
 
- body .container .card:hover .face.face2 h2 {
+ #contact-body .container .card:hover .face.face2 h2 {
 	 font-size: 2em;
-     color: gold
+     color: gold;
 }
 
 
 
- body .container .card:nth-child(even) .face.face2 {
+ #contact-body .container .card:nth-child(even) .face.face2 {
     /* background-image: linear-gradient(40deg, #fffc00 0%, #fc00ff 45%, #00fffc 100%); */
     background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
     radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
@@ -141,7 +139,7 @@ body .container .card .face.face1 .white {
      border-bottom-right-radius: 15px;
      border-bottom-left-radius:15px ;
 }
- body .container .card:nth-child(odd) .face.face2 {
+ #contact-body .container .card:nth-child(odd) .face.face2 {
 	 /* background-image: linear-gradient(40deg, #fc00ff 0%, #00fffc 45%, #fffc00 100%); */
      background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
      radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
@@ -150,23 +148,23 @@ body .container .card .face.face1 .white {
 }
  
 
-body .container .card .face.face1  .small
+#contact-body .container .card .face.face1  .small
 {
     font-size: 1.2em;
 }
 
 @media screen and (min-width:200px)and (max-width:900px) {
-    body .container
+    #contact-body .container
     {
         grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
     }
-    body .container .card .face.face2 h2 
+    #contact-body .container .card .face.face2 h2 
     {
         font-size: 2em;
     }
 }
 
 
-body .container .card .face.face1  .para{
+#contact-body .container .card .face.face1  .para{
     font-size: 18px;
 }
