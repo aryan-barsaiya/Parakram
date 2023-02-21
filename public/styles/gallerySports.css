@@ -329,6 +329,11 @@ a:focus {
   grid-template-rows: 100%;
   grid-template-areas: "... slide ...";
 }
+@media screen and (max-width:1000px) {
+  .slideshow{
+    height: 0;
+  }
+}
 
 .slide {
   width: 100%;
@@ -541,7 +546,7 @@ a:focus {
   opacity: 0;
 }
 
-@media screen and (min-width: 53em) {
+@media screen and (min-width: 1000px) {
   body {
     padding: 0;
   }

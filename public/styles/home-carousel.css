@@ -7,19 +7,24 @@
 
   
   .document-center {
-    position: absolute;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
   }
+ 
   
   /*We do this because the carousel needs to be 100% width 
   in order for the aspect ratio trick to work*/
   .carousel-container {
     max-width: 980px;
-    width: 95%;
+    width: 0%;
     box-shadow: 0 8px 32px 0 #bb841e71;
+  }
+  @media screen and (max-width:1000px) {
+    .carousel-container{
+      width: 95%;
+    }
   }
   
   /*This is the actual carousel. Overflow hidden acts as a mask*/
