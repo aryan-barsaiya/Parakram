@@ -52,7 +52,7 @@ div.heading
 	 grid-template-columns: repeat(auto-fit, minmax(450px,1fr));
 	 grid-gap: 35px;
 	 margin: 0 auto;
-	 padding: 40px 0;
+	 padding: 40px 100px;
 }
  body .container .card {
 	 position: relative;
