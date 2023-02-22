@@ -155,8 +155,8 @@
             };
             this.mousemoveFn = ev => requestAnimationFrame(() => {
                 // Tilt the current slide.
-                if ( !allowTilt || !this.isPositionedCenter() ) return;
-                this.tilt(ev);
+                // if ( !allowTilt || !this.isPositionedCenter() ) return;
+                // this.tilt(ev);
             });
             this.mouseleaveFn = (ev) => requestAnimationFrame(() => {
                 if ( !allowTilt || !this.isPositionedCenter() ) return;
@@ -458,54 +458,54 @@
             };
             window.addEventListener('resize', this.resizeFn);
         }
-        showContent() {
-            if ( this.isContentOpen || this.isAnimating ) return;
-            allowTilt = false;
-            this.isContentOpen = true;
-            this.DOM.el.classList.add('slideshow--previewopen');
-            TweenMax.to(this.DOM.deco, .8, {
-                ease: Power4.easeInOut,
-                scaleX: winsize.width/this.DOM.deco.offsetWidth,
-                scaleY: winsize.height/this.DOM.deco.offsetHeight,
-                x: -20,
-                y: 20
-            });
-            // Move away right/left slides.
-            this.prevSlide.moveToPosition({position: -2});
-            this.nextSlide.moveToPosition({position: 2});
-            // Position the current slide and reset its image scale value.
-            this.currentSlide.moveToPosition({position: 3, resetImageScale: true});
-            // Show content and back arrow (to close the content).
-            this.contents[this.current].show();
-            // Hide texts.
-            this.currentSlide.hideTexts(true);
-        }
-        hideContent() {
-            if ( !this.isContentOpen || this.isAnimating ) return;
+        // showContent() {
+        //     if ( this.isContentOpen || this.isAnimating ) return;
+        //     allowTilt = false;
+        //     this.isContentOpen = true;
+        //     this.DOM.el.classList.add('slideshow--previewopen');
+        //     TweenMax.to(this.DOM.deco, .8, {
+        //         ease: Power4.easeInOut,
+        //         scaleX: winsize.width/this.DOM.deco.offsetWidth,
+        //         scaleY: winsize.height/this.DOM.deco.offsetHeight,
+        //         x: -20,
+        //         y: 20
+        //     });
+        //     // Move away right/left slides.
+        //     this.prevSlide.moveToPosition({position: -2});
+        //     this.nextSlide.moveToPosition({position: 2});
+        //     // Position the current slide and reset its image scale value.
+        //     this.currentSlide.moveToPosition({position: 3, resetImageScale: true});
+        //     // Show content and back arrow (to close the content).
+        //     this.contents[this.current].show();
+        //     // Hide texts.
+        //     this.currentSlide.hideTexts(true);
+        // }
+        // hideContent() {
+        //     if ( !this.isContentOpen || this.isAnimating ) return;
 
-            this.DOM.el.classList.remove('slideshow--previewopen');
+        //     this.DOM.el.classList.remove('slideshow--previewopen');
 
-            // Hide content.
-            this.contents[this.current].hide();
+        //     // Hide content.
+        //     this.contents[this.current].hide();
 
-            TweenMax.to(this.DOM.deco, .8, {
-                ease: Power4.easeInOut,
-                scaleX: 1,
-                scaleY: 1,
-                x: 0,
-                y: 0
-            });
-            // Move in right/left slides.
-            this.prevSlide.moveToPosition({position: -1});
-            this.nextSlide.moveToPosition({position: 1});
-            // Position the current slide.
-            this.currentSlide.moveToPosition({position: 0}).then(() => {
-                allowTilt = true;
-                this.isContentOpen = false;
-            });
-            // Show texts.
-            this.currentSlide.showTexts();
-        }
+        //     TweenMax.to(this.DOM.deco, .8, {
+        //         ease: Power4.easeInOut,
+        //         scaleX: 1,
+        //         scaleY: 1,
+        //         x: 0,
+        //         y: 0
+        //     });
+        //     // Move in right/left slides.
+        //     this.prevSlide.moveToPosition({position: -1});
+        //     this.nextSlide.moveToPosition({position: 1});
+        //     // Position the current slide.
+        //     this.currentSlide.moveToPosition({position: 0}).then(() => {
+        //         allowTilt = true;
+        //         this.isContentOpen = false;
+        //     });
+        //     // Show texts.
+        //     this.currentSlide.showTexts();
+        // }
         // Animates the element behind the current slide.
         bounceDeco(direction, delay) {
             TweenMax.to(this.DOM.deco, .4, {
