@@ -15,6 +15,11 @@ html{
     align-items: center;
     /* margin-top:-50px; */
 }
+@media screen and (max-width:767px) {
+  .section_first{
+    height: 60%;
+  }
+}
 .flame{
     filter: drop-shadow(2px -4px 1px #C03131) url(#fire);
     -webkit-filter: drop-shadow(2px -4px 1px #C03131) url(#fire);
